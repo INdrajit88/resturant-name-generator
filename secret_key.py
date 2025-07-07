@@ -1,1 +1,0 @@
-GEMINI_API=  "AIzaSyBFYeeUvCm3TIcyuB8Mg5iR7F5cn1ffDTA"
