@@ -1,12 +1,12 @@
 import getpass
 import os
+import streamlit as st
 from langchain.chat_models import init_chat_model
-from secret_key import GEMINI_API
 from langchain.chains import SequentialChain, LLMChain
 from langchain.prompts import PromptTemplate
 
 if not os.environ.get("GOOGLE_API_KEY"):
-    os.environ["GOOGLE_API_KEY"] = GEMINI_API
+    os.environ["GOOGLE_API_KEY"] = st.secrets['GEMINI_API']
 
 model = init_chat_model("gemini-2.0-flash", model_provider="google_genai")
 
